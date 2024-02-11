@@ -5,6 +5,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="~/css/site.css" rel="stylesheet" type="text/css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,39 +25,6 @@
         stroke: #333;
         stroke-width: 2;
       }
-     
-
-        @{
-         string[] colors = new string[] 
-            {  
-                "green", "darkgreen"
-                , "forestgreen", "olive"
-                , "seagreen",  "mediumseagreen"
-            };
-
-
-           string[] regions = new string[] 
-            { 
-                "BG-01", "BG-02", "BG-03", "BG-04", "BG-05",
-                "BG-06", "BG-07", "BG-08", "BG-09", "BG-10",
-                "BG-11", "BG-12", "BG-13", "BG-14", "BG-15",
-                "BG-16", "BG-17", "BG-18", "BG-19", "BG-20",
-                "BG-21", "BG-22", "BG-23", "BG-24", "BG-25",
-                "BG-26", "BG-27", "BG-28"
-            };
-
-        }
-
-      
-            /* CSS for Bulgarian regions */
-            @foreach (var region in regions)
-            {
-                var randomColorIndex = new Random().Next(0, colors.Length-1);
-               var randomColor = colors[randomColorIndex];
-
-                <text> #@(region) { fill: @(randomColor); }</text>
-            }
-
 
       path {
         fill: #1da1f2;
@@ -69,6 +38,7 @@
     </style>
 </head>
 <body>
+    <div id="tooltip" style="display: none; position: absolute; padding: 10px; background: white; border: 1px solid black; border-radius: 5px; pointer-events: none; z-index: 1000;"></div>
     <section>
         <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created for MapSVG plugin: http://mapsvg.com -->
@@ -256,3 +226,6 @@
     </section>
 </body>
 </html>
+
+     @section Scripts {
+<script src="~/js/mapColoring.js"></script>}
