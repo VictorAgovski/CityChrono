@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Citychrono.Migrations
+namespace Citychrono.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class InitialMigration : Migration

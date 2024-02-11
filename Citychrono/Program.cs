@@ -1,6 +1,5 @@
-using Microsoft.AspNetCore.Identity;
+using Citychrono.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using Citychrono.Areas.Identity.Data;
 namespace Citychrono
 {
     public class Program

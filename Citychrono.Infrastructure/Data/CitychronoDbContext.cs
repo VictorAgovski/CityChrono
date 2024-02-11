@@ -1,9 +1,7 @@
-﻿using Citychrono.Areas.Identity.Data;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Citychrono.Areas.Identity.Data;
+namespace Citychrono.Infrastructure.Data;
 
 public class CitychronoDbContext : IdentityDbContext<CitychronoUser>
 {
